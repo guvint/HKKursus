@@ -1,42 +1,22 @@
 package modul1GrundlæggendeJava;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 
 /**
- * Opgaver til det første program Opgave 1.1.1 Lav et vindue med 3 knapper. Hver
- * knap skal udskrive en tekst på skærmen. De tre tekster skal være forskellige.
- * 
- * Placer knapperne over hinanden (i en kolonne) Placer knapperne ved siden af
- * hinanden (i en række) Placer knapperne på en skrå linje fra venstre til højre
- * (som en backslash) Placer knapperne på en skrå linje fra højre til venstre
- * (som en skråstreg) Placer knapperne på én linje øverst i vinduet Tip: Husk,
- * at det er Layout managers, som bestemmer, hvordan komponenterne placeres
- * 
- * Opgave 1.1.2 Lav et vindue med komponenter til at oprette en bruger. Det vil
- * sige, at brugeren skal kunne indtaste følgende:
- * 
- * Ønsket brugernavn Adgangskode Gentag adgangskode Der skal også være knapper
- * til OK og Annuller.
- * 
- * Bemærk: Du skal kun lave brugergrænsefladen – ikke koden bagved.
- * 
- * Opgave 1.1.3 Lav en brugergrænseflade hvor brugeren kan indtaste sit navn og
- * trykke på en knap.
- * 
- * Når brugeren trykker på knappen, skal programmet skrive Hej efterfulgt af
- * brugerens navn.
+ * Opgave 1.2.2 Udvid programmet fra forrige opgave, så det viser oplysningerne
+ * på labels i en brugergrænseflade.
  */
 public class MainWindow extends JFrame {
 
@@ -72,15 +52,21 @@ public class MainWindow extends JFrame {
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
 		gbl_contentPane.columnWidths = new int[] { 302, 73, 73, 73, 73, 73, 0 };
-		gbl_contentPane.rowHeights = new int[] { 35, 35, 33, 0, 0, 0 };
+		gbl_contentPane.rowHeights = new int[] { 35, 35, 33, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gbl_contentPane.columnWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
-		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gbl_contentPane.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+				Double.MIN_VALUE };
 		contentPane.setLayout(gbl_contentPane);
 
 		JLabel lblNewLabel = new JLabel("Ønsket brugernavn");
 		JLabel lblNewLabel_1 = new JLabel("Adgangskode");
 		JLabel lblNewLabel_2 = new JLabel("Gentag adgangskode");
 		JLabel lblNewLabel_3 = new JLabel("");
+		JLabel lblNewLabel_4 = new JLabel("");
+		JLabel lblNewLabel_5 = new JLabel("");
+		JLabel lblNewLabel_6 = new JLabel("");
+		JLabel lblNewLabel_7 = new JLabel("");
+		JLabel lblNewLabel_8 = new JLabel("");
 
 		textField = new JTextField();
 		textField_1 = new JTextField();
@@ -135,6 +121,16 @@ public class MainWindow extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				lblNewLabel_3.setText("Hej " + textField.getText());
+
+				// Tilføj personoplysninger fra Datatyper.java, hvis det indtastede navn er det
+				// samme som i Datatyper.java
+				if (textField.getText().contentEquals(Datatyper.navn())) {
+					lblNewLabel_4.setText("Navn: " + Datatyper.navn());
+					lblNewLabel_5.setText("Alder: " + Datatyper.alder());
+					lblNewLabel_6.setText("Telefonnummer: " + Datatyper.telefonnummer());
+					lblNewLabel_7.setText("Gift: " + Datatyper.gift());
+					lblNewLabel_8.setText("Højde: " + Datatyper.hoejde());
+				}
 			}
 		});
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
@@ -148,7 +144,12 @@ public class MainWindow extends JFrame {
 		JButton btnNewButton_1 = new JButton("Annuller");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblNewLabel_3.setText("Navn slettet");
+				lblNewLabel_3.setText("Oplysninger nulstillet");
+				lblNewLabel_4.setText("");
+				lblNewLabel_5.setText("");
+				lblNewLabel_6.setText("");
+				lblNewLabel_7.setText("");
+				lblNewLabel_8.setText("");
 			}
 		});
 		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
@@ -159,10 +160,45 @@ public class MainWindow extends JFrame {
 
 		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
 		gbc_lblNewLabel_3.fill = GridBagConstraints.BOTH;
-		gbc_lblNewLabel_3.insets = new Insets(0, 0, 0, 5);
+		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_3.gridx = 0;
 		gbc_lblNewLabel_3.gridy = 4;
 		contentPane.add(lblNewLabel_3, gbc_lblNewLabel_3);
+
+		GridBagConstraints gbc_lblNewLabel_4 = new GridBagConstraints();
+		gbc_lblNewLabel_4.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblNewLabel_4.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel_4.gridx = 0;
+		gbc_lblNewLabel_4.gridy = 5;
+		contentPane.add(lblNewLabel_4, gbc_lblNewLabel_4);
+
+		GridBagConstraints gbc_lblNewLabel_5 = new GridBagConstraints();
+		gbc_lblNewLabel_5.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblNewLabel_5.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel_5.gridx = 0;
+		gbc_lblNewLabel_5.gridy = 6;
+		contentPane.add(lblNewLabel_5, gbc_lblNewLabel_5);
+
+		GridBagConstraints gbc_lblNewLabel_6 = new GridBagConstraints();
+		gbc_lblNewLabel_6.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblNewLabel_6.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel_6.gridx = 0;
+		gbc_lblNewLabel_6.gridy = 7;
+		contentPane.add(lblNewLabel_6, gbc_lblNewLabel_6);
+
+		GridBagConstraints gbc_lblNewLabel_7 = new GridBagConstraints();
+		gbc_lblNewLabel_7.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblNewLabel_7.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel_7.gridx = 0;
+		gbc_lblNewLabel_7.gridy = 8;
+		contentPane.add(lblNewLabel_7, gbc_lblNewLabel_7);
+
+		GridBagConstraints gbc_lblNewLabel_8 = new GridBagConstraints();
+		gbc_lblNewLabel_8.fill = GridBagConstraints.HORIZONTAL;
+		gbc_lblNewLabel_8.insets = new Insets(0, 0, 0, 5);
+		gbc_lblNewLabel_8.gridx = 0;
+		gbc_lblNewLabel_8.gridy = 9;
+		contentPane.add(lblNewLabel_8, gbc_lblNewLabel_8);
 	}
 
 }
