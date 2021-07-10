@@ -18,7 +18,7 @@ import java.awt.event.ActionEvent;
 /**
  * Opgave 1.3.4 Lav en brugergrænseflade med et tekstfelt og en knap. Når man
  * trykker på knappen, skal programmet tage tallet i tekstfeltet og dividere med
- * 3 og skrive resultatet.
+ * 3 og skrive resultatet. 
  * 
  * Virker dit program også, hvis du fx skriver 5 i tekstfeltet? Hvorfor /
  * hvorfor ikke?
