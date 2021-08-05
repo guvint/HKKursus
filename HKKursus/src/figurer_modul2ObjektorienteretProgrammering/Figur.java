@@ -1,4 +1,4 @@
-package modul2ObjektorienteretProgrammering;
+package figurer_modul2ObjektorienteretProgrammering;
 
 public abstract class Figur {
 
