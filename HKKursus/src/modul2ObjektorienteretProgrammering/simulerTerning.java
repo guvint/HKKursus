@@ -34,7 +34,5 @@ public class simulerTerning {
 		for (int i = 0; i < 6; i++) {
 			System.out.print((terning(terningeSider, antalTerninger)) + " ");
 		}
-
 	}
-
 }
