@@ -1,4 +1,4 @@
-package staticFinal_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.staticFinal;
 
 public class Main {
 	public static void main(String[] args) {

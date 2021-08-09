@@ -1,4 +1,4 @@
-package figurer_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.figurer;
 
 /**
  * Opgave 2.3.1 Lav klasserne Figur, Firkant og Cirkel. I stedet for metoden

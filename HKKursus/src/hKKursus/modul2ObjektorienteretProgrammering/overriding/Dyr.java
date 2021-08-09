@@ -1,4 +1,4 @@
-package overriding_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.overriding;
 
 public abstract class Dyr {
 	public abstract String sigNoget();

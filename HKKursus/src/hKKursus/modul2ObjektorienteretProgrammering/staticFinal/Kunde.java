@@ -1,4 +1,4 @@
-package staticFinal_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.staticFinal;
 
 /**
  * Lav en kundeklasse, som har en statisk variabel kaldet naesteKunde. Denne

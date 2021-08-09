@@ -1,4 +1,4 @@
-package figurer_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.figurer;
 
 public class Trekant extends Figur {
 	int laengde1;

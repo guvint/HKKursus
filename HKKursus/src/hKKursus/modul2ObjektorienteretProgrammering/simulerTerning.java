@@ -1,4 +1,4 @@
-package modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering;
 
 import java.util.Random;
 

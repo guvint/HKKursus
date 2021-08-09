@@ -1,4 +1,4 @@
-package overriding_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.overriding;
 
 /**
  * Lav tre klasser: Dyr, Hund og Kat. Dyr er superklasse for de to øvrige.

@@ -1,4 +1,4 @@
-package modul1GrundlæggendeJava;
+package hKKursus.modul1GrundlæggendeJava;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;

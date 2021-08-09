@@ -1,4 +1,4 @@
-package staticFinal_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.staticFinal;
 
 /**
  * Lav en klasse, der kan omregne mellem Euro og danske kroner. Antag at en euro

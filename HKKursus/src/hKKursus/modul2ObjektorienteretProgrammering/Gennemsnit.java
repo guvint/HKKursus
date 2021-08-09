@@ -1,4 +1,4 @@
-package modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering;
 
 /**
  * Lav en metode, som beregner gennemsnittet af tallene i et array. Lav to

@@ -1,4 +1,4 @@
-package modul1GrundlæggendeJava;
+package hKKursus.modul1GrundlæggendeJava;
 
 /**
  * Opgave 1.2.1

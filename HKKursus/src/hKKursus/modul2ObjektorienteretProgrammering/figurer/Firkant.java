@@ -1,4 +1,4 @@
-package figurer_modul2ObjektorienteretProgrammering;
+package hKKursus.modul2ObjektorienteretProgrammering.figurer;
 
 public class Firkant extends Figur {
 	int bredde;
